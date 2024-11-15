@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .form-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .form-header {
+    font-size: 24px;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .form-description {
+    font-size: 14px;
+    color: #666;
+    margin: 15px 0;
+  }
+  
+  .form-group {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .form-group input[type="text"]::placeholder {
+    font-style: italic;
+    color: #999;
+  }
+  
+  /* Suggestions container */
+  .suggestions-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .form-group-small {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .form-group-small .small-input {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 45%;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form-button {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-button.black {
+    background-color: black;
+  }
+  
+  .form-button.blue {
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  }
+  

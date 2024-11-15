@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Quiz</title>
+    <link rel="stylesheet" href="/static/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Quiz</h1>
+        <p>Your selected job title: <strong>{{ job }}</strong></p>
+
+        <!-- Quiz Form -->
+        <div class="quiz-container">
+            <form id="quiz-form">
+                <!-- Hidden field to store the selected job title -->
+                <input type="hidden" name="job-interest" value="{{ job }}">
+
+                <!-- Quiz Question -->
+                <div class="question">
+                    <h3>1. What type of development work excites you the most?</h3>
+                    <label><input type="radio" name="q1" value="programming" required> Building applications or systems using programming languages</label><br>
+                    <label><input type="radio" name="q1" value="design"> Creating and designing websites for user experience</label><br>
+                    <label><input type="radio" name="q1" value="mobile"> Developing mobile apps for Android or iOS platforms</label><br>
+                    <label><input type="radio" name="q1" value="data-analysis"> Analyzing data to uncover trends and insights</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Result Container (hidden by default) -->
+        <div class="result-container" id="result-container" style="display: none;">
+            <h2>Your Quiz Result</h2>
+            <p id="result-message"></p>
+            <button class="retry-btn" onclick="restartQuiz()">Retry Quiz</button>
+        </div>
+    </div>
+
+    <!-- Link to External JavaScript File -->
+    <script src="/static/quiz.js"></script>
+</body>
+</html>

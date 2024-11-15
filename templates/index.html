@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Finder</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">Job Finder</div>
+    <div class="form-description">
+      Find your dream job by entering a job title and starting the quiz.
+    </div>
+
+    <form method="GET" action="/quiz">
+      <div class="form-group">
+        <label for="job">Job Title</label>
+        <input type="text" id="job" name="job" placeholder="Enter job title" oninput="filterSuggestions()" autocomplete="off" required>
+        <div id="suggestions-container" class="suggestions-container"></div>
+      </div>
+
+      <div class="form-group-small">
+        <div>
+          <label for="date">Date</label>
+          <input type="date" id="date" class="small-input">
+        </div>
+        <div>
+          <label for="time">Time</label>
+          <input type="time" id="time" class="small-input">
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <button type="button" class="form-button black" onclick="goBack()">Back</button>
+        <button type="submit" class="form-button blue">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
